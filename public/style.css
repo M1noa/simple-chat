@@ -1,0 +1,176 @@
+/* Fix user-agent */
+* {
+  box-sizing: border-box;
+}
+
+html, input {
+  font-family: "Ubuntu", cursive, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2a282e;
+  color: #c2c2c2;
+  opacity: 0; /* Set initial opacity to 0 for fade-in animation */
+  animation: fade-in 0.5s ease-in-out forwards; /* Apply fade-in animation on page load */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+ul {
+  list-style: none;
+  word-wrap: break-word;
+}
+
+/* Pages */
+.pages {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+/* Login Page */
+.login.page {
+}
+
+.login.page .form {
+  height: 100px;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.login.page .form .usernameInput {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d6d6d6;
+  outline: none;
+  padding-bottom: 15px;
+  text-align: center;
+  width: 400px;
+  color: #cabdd1;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.login.page .title {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.login.page .usernameInput {
+  font-size: 2rem;
+  letter-spacing: 3px;
+}
+
+/* Chat page */
+.chat.page {
+  display: none;
+}
+
+/* Font */
+.messages {
+  font-size: 1.5rem;
+}
+
+.inputMessage {
+  font-size: 1rem;
+}
+
+.log {
+  color: #c8b9cf;
+  font-size: 0.7rem;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Messages */
+.chatArea {
+  height: 100%;
+  padding-bottom: 60px;
+}
+
+.messages {
+  height: 100%;
+  margin: 0;
+  overflow-y: scroll;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.message.typing .messageBody {
+  color: #858585;
+  font-size: 75%; /* Make the typing message 75% smaller */
+}
+
+.message .messageBody {
+  color: #b29dbe;
+  animation: jump-in 0.5s ease-in-out forwards; /* Apply jump-in animation to new messages */
+}
+
+@keyframes jump-in {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.username {
+  font-weight: 700;
+  overflow: hidden;
+  padding-right: 15px;
+  text-align: right;
+}
+
+/* Input */
+.inputMessage {
+  border: none;
+  border-radius: 30px;
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  outline: none;
+  padding: 0 20px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background-color: #222;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+blink {
+  animation: blink-animation 1s steps(5, start) infinite;
+}
+
+marquee {
+  color: #c1b3cc !important;
+}
+
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
